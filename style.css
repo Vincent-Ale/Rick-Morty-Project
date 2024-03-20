@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: radial-gradient(ellipse at center, #DE3616 20%, #eb8836 80%);
+}
+
+h1{
+    display: none; 
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/*########################################################*/
+/*######### Table of buttons to random characters ########*/
+/*########################################################*/
+
+.randomZone{
+    display: flex;
+    flex-direction: column;
+    border: 8px solid #afdd6b;
+    border-radius: 1rem;
+    background-color: #005763;
+    color: #00B0C7;
+    padding: 1rem;
+    margin-top: 9rem;
+}
+
+h2{
+    color: #00B0C7;
+    font-size: 32px;
+    font-family: Bangers;
+    font-weight: 500;
+}
+
+p{
+    color: #00B0C7;
+    font-size: 24px;
+    font-family: Bangers;
+    font-weight: 500;
+}
+
+.randomZonebtn{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+}
+
+.randombtn{
+    height: 100px;
+    margin: 5px 0;
+    border: 3px solid #afdd6b;
+    border-radius: 1rem;
+    background-color: #00B0C7;
+    color: #005763;
+    font-size: 40px;
+    font-family: Bangers;
+    padding: 1rem;
+}
+
+.randombtn:hover{
+    cursor: pointer;
+    background-color: #005763;
+    color: #00B0C7;
+}
+
+.dead{
+    font-family: Butcherman;
+}
+/*#####################################*/
+/*################ END ################*/
+/*#####################################*/
+
+
+.tableHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*#####################################*/
+/*############### TITLE ###############*/
+/*#####################################*/
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.allwords{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.discover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    -webkit-text-stroke: 2px #005763;
+    color: #00B0C7;
+    font-size: 64px;
+    font-family: Bangers;
+    text-shadow: 3px 3px 4px rgba(175, 221, 107, 1), 3px -3px 4px rgba(175, 221, 107, 1), -3px 3px 4px rgba(175, 221, 107, 1), -3px -3px 4px rgba(175, 221, 107, 1);
+}
+.word3{
+    font-size: 96px;
+    margin-right: 2rem;
+    -webkit-text-stroke: 2px #005763;
+}
+/*#####################################*/
+/*################ END ################*/
+/*#####################################*/
+
+
+
+/*##################################################*/
+/*############### Table of characters ##############*/
+/*##################################################*/
+
+.charZone{
+    display: flex;
+    flex-direction: column;
+    width: 970px;
+    height: 630px;
+    background-color: #afdd6b;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.lineChar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.char{
+    width: 150px;
+    height: 300px;
+    background-color: #005763;
+    margin: 5px;
+}
+/*#####################################*/
+/*################ END ################*/
+/*#####################################*/
+
+.imgchar img{
+    transform: translateY(10%) translateX(-25%) scale(1.5);
+    z-index: 0;
+}
