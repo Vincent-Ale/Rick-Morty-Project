@@ -16,6 +16,7 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin-left: 1rem;
 }
 
 /*########################################################*/
@@ -30,30 +31,37 @@ main{
     background-color: #005763;
     color: #00B0C7;
     padding: 1rem;
-    margin-top: 9rem;
+    margin-top: 13rem;
+    transform: translateX(4%);
 }
 
 h2{
     color: #00B0C7;
-    font-size: 32px;
+    font-size: 40px;
     font-family: Bangers;
     font-weight: 500;
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
-p{
+.choose{
     color: #00B0C7;
     font-size: 24px;
     font-family: Bangers;
     font-weight: 500;
+    letter-spacing: 1px;
+    text-wrap: nowrap;
+    text-align: center;
 }
 
-.randomZonebtn{
+.buttons-container{
     display: flex;
     flex-direction: column;
     margin: 5px 10px;
+    padding-top: 1rem;
 }
 
-.randombtn{
+.filter-button{
     height: 100px;
     margin: 5px 0;
     border: 3px solid #afdd6b;
@@ -65,7 +73,7 @@ p{
     padding: 1rem;
 }
 
-.randombtn:hover{
+.filter-button:hover{
     cursor: pointer;
     background-color: #005763;
     color: #00B0C7;
@@ -95,6 +103,7 @@ p{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .allwords{
@@ -131,31 +140,60 @@ p{
 /*############### Table of characters ##############*/
 /*##################################################*/
 
-.charZone{
-    display: flex;
-    flex-direction: column;
-    width: 970px;
-    height: 630px;
-    background-color: #afdd6b;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
+.characters-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    background-color: #005763;
+    padding: 1rem;
+    border: 8px solid #afdd6b;
     border-radius: 1rem;
     z-index: 1;
+    transform: translateX(4%);
 }
 
-.lineChar{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.char{
-    width: 150px;
-    height: 300px;
-    background-color: #005763;
+.character {
+    border: 4px solid #afdd6b;
+    border-radius: 1rem;
     margin: 5px;
+    padding: 10px;
+    width: 150px;
+    height: 260px;
+    background-color: #00B0C7;
 }
+
+.character:hover{
+    cursor: pointer;
+    background-color: #005763;
+    &>h3{
+        color: #00B0C7;
+    }
+    &>p{
+        color: #00B0C7;
+    }
+}
+
+.character img {
+    max-width: 100%;
+    height: auto;
+}
+
+h3{
+    color: #005763;
+    font-size: 24px;
+    font-family: Bangers;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+p{
+    color: #005763;
+    font-size: 16px;
+    font-family: Bangers;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
 /*#####################################*/
 /*################ END ################*/
 /*#####################################*/

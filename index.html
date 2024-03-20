@@ -19,12 +19,13 @@
         <!-- Table of buttons to random characters -->
         <div class="randomZone">
             <h2>Instructions</h2>
-            <p>Choose a random character type</p>
-            <div class="randomZonebtn">
-                <button class="randombtn all">All</button>
-                <button class="randombtn alive">Alive</button>
-                <button class="randombtn dead">Dead</button>
-                <button class="randombtn unknow">Unknow Status</button>
+            <span class="choose">Choose a random</span>
+            <span class="choose">character type</span>
+            <div class="buttons-container">
+                <button class="filter-button" data-filter="all">All</button>
+                <button class="filter-button" data-filter="alive">Alive</button>
+                <button class="filter-button" data-filter="dead">Dead</button>
+                <button class="filter-button" data-filter="unknown">Unknown</button>
             </div>
         </div>
         <!-- Table of buttons to random characters -->
@@ -44,24 +45,9 @@
             <!-- TITLE -->
 
             <!-- Table of characters -->
-            <div class="charZone">
-                <div class="lineChar">
-                    <div class="char"></div>
-                    <div class="char"></div>
-                    <div class="char"></div>
-                    <div class="char"></div>
-                    <div class="char"></div>
-                    <div class="char"></div>
+                <div class="characters-container" id="characters-container">
+
                 </div>
-                <div class="lineChar">
-                    <div class="char"></div>
-                    <div class="char"></div>
-                    <div class="char"></div>
-                    <div class="char"></div>
-                    <div class="char"></div>
-                    <div class="char"></div>
-                </div>
-            </div>
             <!-- Table of characters -->
         </div>
 
