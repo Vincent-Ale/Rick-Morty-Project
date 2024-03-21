@@ -208,7 +208,6 @@ h2{
 .popup-close:hover{
     color: #00B0C7;
 }
-
 /*#####################################*/
 /*################ END ################*/
 /*#####################################*/
@@ -223,6 +222,8 @@ h2{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
+    width: 1176px;
+    height: 624px;
     background-color: #005763;
     padding: 1rem;
     border: 8px solid #afdd6b;
