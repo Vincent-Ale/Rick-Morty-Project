@@ -103,7 +103,7 @@ h2{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .allwords{
@@ -121,7 +121,7 @@ h2{
     gap: 2rem;
     -webkit-text-stroke: 2px #005763;
     color: #00B0C7;
-    font-size: 64px;
+    font-size: 80px;
     font-family: Bangers;
     text-shadow: 3px 3px 4px rgba(175, 221, 107, 1), 3px -3px 4px rgba(175, 221, 107, 1), -3px 3px 4px rgba(175, 221, 107, 1), -3px -3px 4px rgba(175, 221, 107, 1);
 }
