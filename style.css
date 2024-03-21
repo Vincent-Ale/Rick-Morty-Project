@@ -206,7 +206,8 @@ h2{
 }
 
 .popup-close:hover{
-    color: #00B0C7;
+    color: #005763;
+    text-shadow: 0 10px 15px #afdd6b, 10px 0 15px #afdd6b, -10px 0 15px #afdd6b, 0 -10px 15px #afdd6b;
 }
 /*#####################################*/
 /*################ END ################*/
