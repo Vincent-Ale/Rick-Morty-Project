@@ -32,6 +32,7 @@ async function displayCharacters(filter) {
     charactersToShow.forEach(character => {
         const characterDiv = document.createElement('div');
         characterDiv.classList.add('character');
+        characterDiv.setAttribute('data-id', character.id); // Ajouter un identifiant unique
 
         const nameElement = document.createElement('h3');
         nameElement.textContent = character.name;
@@ -54,6 +55,52 @@ async function displayCharacters(filter) {
     });
 }
 
+async function displayPopup(characterId) {
+    const character = await fetch(`https://rickandmortyapi.com/api/character/${characterId}`);
+    const characterData = await character.json();
+
+    document.getElementById('popup-name').textContent = characterData.name;
+    document.getElementById('popup-status').innerHTML = `<u>Status:</u> ${characterData.status}`;
+    document.getElementById('popup-species').innerHTML = `<u>Species:</u> ${characterData.species}`;
+    document.getElementById('popup-origin').innerHTML = `<u>Origin:</u> ${characterData.origin.name}`;
+    document.getElementById('popup-location').innerHTML = `<u>Last Location:</u> ${characterData.location.name}`;
+
+    const episodesList = document.getElementById('popup-episodes');
+    episodesList.innerHTML = ''; // Clear previous episodes
+
+    const episodePromises = characterData.episode.map(async (episodeURL, index) => {
+    const episode = await fetch(episodeURL);
+    const episodeData = await episode.json();
+    return episodeData.id;
+    });
+
+    Promise.all(episodePromises)
+    .then(episodes => {
+        const joinedEpisodes = episodes.join(', ');
+        episodesList.textContent = joinedEpisodes;
+    })
+    .catch(error => {
+        console.error('Error fetching episodes:', error);
+    });
+
+
+
+    document.getElementById('popup').style.display = 'flex';
+}
+
+// Close popup when close button is clicked
+document.getElementById('popup-close').addEventListener('click', () => {
+    document.getElementById('popup').style.display = 'none';
+});
+
+// Close popup when clicked outside of the popup
+window.addEventListener('click', (event) => {
+    const popup = document.getElementById('popup');
+    if (event.target !== popup && !popup.contains(event.target)) {
+        popup.style.display = 'none';
+    }
+});
+
 document.querySelectorAll('.filter-button').forEach(button => {
     button.addEventListener('click', async () => {
         const filter = button.getAttribute('data-filter');
@@ -63,3 +110,12 @@ document.querySelectorAll('.filter-button').forEach(button => {
 
 // Au chargement initial de la page, afficher tous les personnages
 displayCharacters('all');
+
+// Add click event to each character
+document.getElementById('characters-container').addEventListener('click', (event) => {
+    const characterDiv = event.target.closest('.character');
+    if (characterDiv) {
+        const characterId = characterDiv.getAttribute('data-id');
+        displayPopup(characterId);
+    }
+});

@@ -136,6 +136,72 @@ h2{
 
 
 
+/*############################################*/
+/*################### POPUP ##################*/
+/*############################################*/
+
+.popup {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(images/teleport.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px;
+    width: 500px;
+    height: 500px;
+    border-radius: 15rem;
+    z-index: 999;
+    text-align: center;
+    font-family: Bangers;
+    text-shadow: 0 5px 10px #ffffff, 5px 0 10px #ffffff, -5px 0 10px #ffffff, 0 -5px 10px #ffffff;
+    &>p{
+        color: #005763;
+        font-size: 26px;
+    }
+    &>h2{
+        color: #005763;
+        font-size: 40px;
+        margin-bottom: 1rem;
+    }
+    &>h3{
+        color: #005763;
+        font-size: 32px;
+        margin-top: 2rem;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+    &>ul{
+        color: #005763;
+        font-size: 24px;
+    }
+}
+
+.popup-close {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    cursor: pointer;
+    color: #afdd6b;
+    font-family: Bangers;
+    font-size: 40px;
+    text-shadow: 0 10px 15px #005763, 10px 0 15px #005763, -10px 0 15px #005763, 0 -10px 15px #005763;
+    transform: translateX(-50%);
+}
+
+.popup-close:hover{
+    color: #00B0C7;
+}
+/*#####################################*/
+/*################ END ################*/
+/*#####################################*/
+
+
+
 /*##################################################*/
 /*############### Table of characters ##############*/
 /*##################################################*/
@@ -158,8 +224,18 @@ h2{
     margin: 5px;
     padding: 10px;
     width: 150px;
-    height: 260px;
+    height: 270px;
     background-color: #00B0C7;
+    &>h3{
+        color: #005763;
+        font-size: 24px;
+        font-family: Bangers;
+        font-weight: 500;
+        letter-spacing: 1px;
+        height: 75px;
+        width: 148px;
+        text-align: center;
+    }
 }
 
 .character:hover{
@@ -176,14 +252,7 @@ h2{
 .character img {
     max-width: 100%;
     height: auto;
-}
-
-h3{
-    color: #005763;
-    font-size: 16px;
-    font-family: Bangers;
-    font-weight: 500;
-    letter-spacing: 1px;
+    border-radius: 3rem;
 }
 
 p{
