@@ -140,14 +140,15 @@ h2{
 /*################### POPUP ##################*/
 /*############################################*/
 
-.popup {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
+.popup{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    animation: popup 1s;
     background-image: url(images/teleport.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -155,7 +156,7 @@ h2{
     width: 500px;
     height: 500px;
     border-radius: 15rem;
-    z-index: 999;
+    z-index: 99;
     text-align: center;
     font-family: Bangers;
     text-shadow: 0 5px 10px #ffffff, 5px 0 10px #ffffff, -5px 0 10px #ffffff, 0 -5px 10px #ffffff;
@@ -181,6 +182,17 @@ h2{
     }
 }
 
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
 .popup-close {
     position: absolute;
     bottom: 2%;
@@ -196,6 +208,7 @@ h2{
 .popup-close:hover{
     color: #00B0C7;
 }
+
 /*#####################################*/
 /*################ END ################*/
 /*#####################################*/

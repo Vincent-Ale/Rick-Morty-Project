@@ -1,7 +1,7 @@
 async function fetchAllCharacters() {
     const allCharacters = [];
 
-    // Boucle pour récupérer chaque page de personnages
+    // Loop to catch all characters
     for (let page = 1; page <= 42; page++) {
         const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`);
         const data = await response.json();
@@ -13,7 +13,7 @@ async function fetchAllCharacters() {
 
 async function displayCharacters(filter) {
     const charactersContainer = document.getElementById('characters-container');
-    charactersContainer.innerHTML = ''; // Effacer les personnages précédents
+    charactersContainer.innerHTML = ''; // Delete previous character
 
     const allCharacters = await fetchAllCharacters();
 
@@ -23,16 +23,16 @@ async function displayCharacters(filter) {
         filteredCharacters = allCharacters.filter(character => character.status.toLowerCase() === filter);
     }
 
-    // Mélanger le tableau de personnages
+    // Random table of characters
     filteredCharacters.sort(() => Math.random() - 0.5);
 
-    // Sélectionner uniquement les 12 premiers personnages
+    // Select only 12 characters
     const charactersToShow = filteredCharacters.slice(0, 12);
 
     charactersToShow.forEach(character => {
         const characterDiv = document.createElement('div');
         characterDiv.classList.add('character');
-        characterDiv.setAttribute('data-id', character.id); // Ajouter un identifiant unique
+        characterDiv.setAttribute('data-id', character.id); // Add unique id
 
         const nameElement = document.createElement('h3');
         nameElement.textContent = character.name;
@@ -108,7 +108,7 @@ document.querySelectorAll('.filter-button').forEach(button => {
     });
 });
 
-// Au chargement initial de la page, afficher tous les personnages
+// On initial page load, show all characters
 displayCharacters('all');
 
 // Add click event to each character
