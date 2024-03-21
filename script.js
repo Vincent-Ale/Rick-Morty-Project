@@ -60,6 +60,7 @@ async function displayPopup(characterId) {
     const characterData = await character.json();
 
     document.getElementById('popup-name').textContent = characterData.name;
+    document.getElementById('popup-image').src = characterData.image;
     document.getElementById('popup-status').innerHTML = `<u>Status:</u> ${characterData.status}`;
     document.getElementById('popup-species').innerHTML = `<u>Species:</u> ${characterData.species}`;
     document.getElementById('popup-origin').innerHTML = `<u>Origin:</u> ${characterData.origin.name}`;

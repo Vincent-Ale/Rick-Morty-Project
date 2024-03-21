@@ -226,8 +226,8 @@ h2{
     background-repeat: no-repeat;
     background-size: cover;
     padding: 60px;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     border-radius: 15rem;
     z-index: 99;
     text-align: center;
@@ -253,6 +253,34 @@ h2{
         color: #005763;
         font-size: 24px;
     }
+}
+
+.center-popup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-row{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    &>p{
+        color: #005763;
+        font-size: 26px;
+        margin: .5rem 0;
+        text-align: left;
+    }
+}
+
+#popup-image{
+    width: 250px;
+    height: 250px;
+    border-radius: 5rem;
+    margin-bottom: 1rem;
 }
 
 @keyframes popup {
