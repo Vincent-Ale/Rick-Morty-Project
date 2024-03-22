@@ -434,3 +434,66 @@ p{
     transform: translateY(10%) translateX(-25%) scale(1.5);
     z-index: 0;
 }
+
+
+/*#################################################*/
+/*################ TELEPORT BUTTON ################*/
+/*#################################################*/
+
+.teleport{
+    display: none;
+}
+
+@media (max-width: 480px){
+    .teleport{
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+    .warnarrow{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateX(50px);
+        &>img{
+            width: 100px;
+            height: 50px;
+        }
+    }
+    .warning{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       width: 200px;
+       height: 100px;
+    }
+    .push{
+        color: white;
+        font-size: 32px;
+        font-family: Bangers;
+        background-color: red;
+        border-radius: 2rem 2rem 0 0;
+        padding: 0.5rem 2rem;
+    }
+    .up{
+        color: black;
+        font-size: 32px;
+        font-family: Bangers;
+        background-color: white;
+        border-radius: 0 0 2rem 2rem;
+        padding: 0.5rem 2rem;
+    }
+    .btn-teleport{
+        width: 250px;
+        height: 250px;
+        background-image: url(images/teleporter.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateX(-45px);
+    }
+}
+
+/*#####################################*/
+/*################ END ################*/
+/*#####################################*/
