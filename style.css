@@ -287,7 +287,6 @@ h2{
     width: 250px;
     height: 250px;
     border-radius: 5rem;
-    margin-bottom: 1rem;
 }
 
 @keyframes popup {
@@ -326,13 +325,17 @@ h2{
             font-size: 26px;
         }
         &>h3{
-            font-size: 22px;
+            font-size: 18px;
+        }
+        &>ul{
+            font-size: 18px;
         }
     }
 
     .p-row{
         &>p{
             font-size: 18px;
+            margin: .2rem 0;
         }
     }
     #popup-image{
