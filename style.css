@@ -3,6 +3,12 @@
     margin: 0;
 }
 
+@media (max-width: 480px){
+    html{
+        width: 100vw;
+    }
+}
+
 body{
     background: radial-gradient(ellipse at center, #DE3616 20%, #eb8836 80%);
 }
