@@ -310,6 +310,31 @@ h2{
     color: #005763;
     text-shadow: 0 10px 15px #afdd6b, 10px 0 15px #afdd6b, -10px 0 15px #afdd6b, 0 -10px 15px #afdd6b;
 }
+
+@media (max-width: 480px){
+    .popup{
+        width: 400px;
+        height: 400px;
+        &>h2{
+            font-size: 26px;
+        }
+        &>h3{
+            font-size: 22px;
+        }
+    }
+
+    .p-row{
+        &>p{
+            font-size: 18px;
+        }
+    }
+    #popup-image{
+        width: 150px;
+        height: 150px;
+        border-radius: 2rem;
+        margin-bottom: 0.5rem;
+    }
+}
 /*#####################################*/
 /*################ END ################*/
 /*#####################################*/
