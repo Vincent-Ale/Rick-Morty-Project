@@ -476,17 +476,22 @@ p{
         color: white;
         font-size: 32px;
         font-family: Bangers;
-        background-color: red;
+        font-weight: 500;
+        background-color: rgb(222, 2, 2);
         border-radius: 2rem 2rem 0 0;
-        padding: 0.5rem 2rem;
+        padding: 0.7rem 2rem;
     }
     .up{
         color: black;
         font-size: 32px;
         font-family: Bangers;
+        font-weight: 500;
         background-color: white;
         border-radius: 0 0 2rem 2rem;
-        padding: 0.5rem 2rem;
+        padding: 0.7rem 2rem;
+    }
+    .changecolor{
+        color: white;
     }
     .btn-teleport{
         width: 250px;
