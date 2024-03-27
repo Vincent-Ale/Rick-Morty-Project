@@ -6,6 +6,7 @@ Desktop Version:
 ![image](https://github.com/Vincent-Ale/Rick-Morty-Project/assets/159807430/bb91e670-9dab-410e-994b-8341a137b212)
 
 Phone Version:
+
 ![image](https://github.com/Vincent-Ale/Rick-Morty-Project/assets/159807430/6322ed84-f4a0-4f42-ae6a-88a9baae54a8)
 
 
